@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&family=Lexend&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-Lightgray;
+    @apply text-white;
+    @apply font-bree;
+  }
+}
+
+.bg-custom-image {
+  background-image: url("/images/image4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.white-underline {
+  position: relative;
+}
+
+.white-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value to control the distance of the underline from the text */
+  width: 0;
+  height: 2px; /* Adjust this value to control the thickness of the underline */
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.white-underline:hover::after {
+  width: 100%;
+}

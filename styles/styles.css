@@ -1,0 +1,23 @@
+/* styles.css */
+
+/* Define a class for the white underline */
+.white-underline {
+  position: relative;
+}
+
+/* Define the pseudo-element that will create the underline */
+.white-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust this value to control the distance of the underline from the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white; /* Change this color to the desired underline color */
+  transition: width 0.2s ease-out; /* Adjust the transition speed as needed */
+}
+
+/* Define the hover state for the underline */
+.white-underline:hover::after {
+  width: 100%;
+}
